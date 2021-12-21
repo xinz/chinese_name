@@ -57,7 +57,7 @@ Run `mix test`
 ## You should know
 
 Due to some Chinese characters naming may overlap, this library is no guarantee to 100% give the correct match, for example, both "万俟"(mò qí) and "万"(wàn) 
-are valid Chinese surnames, the implement of this library make the longer string of the surname character(s) in a higher pattern match priority, so if input a naming as "万俟咏", it will process "万俟" as the surname, not "万".
+are valid Chinese surnames, the implement of this library make the longer string of the surname character(s) in a higher pattern match priority, so if input a name as "万俟咏", it will process "万俟" as the surname, not "万".
 
 > "万俟" is a double-character surname, is a typical ethnic minority surname.
 
