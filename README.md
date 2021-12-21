@@ -1,6 +1,6 @@
 # ChineseName
 
-A simple tool built-in dataset for processing Chinese name, to get the surname, given name, or both to the valid Chinese name.
+A simple tool built-in dataset for processing Chinese name, to get the surname, given name, or both from the valid Chinese name input.
 
 The surnams dataset are merged from:
 
@@ -9,7 +9,7 @@ The surnams dataset are merged from:
 
 ## Usage
 
-We use pattern match to find the match surname or others in the pre-compiled modules, here are some example:
+We use pattern match to find the match surname or others in the pre-compiled modules, here are some examples:
 
 ```
 iex(1)> ChineseName.surname("李四")
@@ -20,7 +20,7 @@ iex(3)> ChineseName.split("李四")
 {"李", "四"}
 ```
 
-If input an invalid or not-included in the dataset naming, there will return `nil` or the origin input:
+If input an invalid or not-included in the dataset surnames, there will return `nil` or the origin input:
 
 ```
 iex(5)> ChineseName.surname("测试")
