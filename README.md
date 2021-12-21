@@ -35,7 +35,7 @@ Please see the document of the main module `ChineseName` for details.
 
 ## Development
 
-Since we use [floki](https://hex.pm/packages/floki) with [html5ever](hex.pm/packages/html5ever) parser to parse the HTML page of [Baidu Baike - 中华姓氏大全]((https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E5%A7%93%E6%B0%8F%E5%A4%A7%E5%85%A8/1689641)), the Rust compiler [installed](https://www.rust-lang.org/tools/install) is required.
+Since we use [floki](https://hex.pm/packages/floki) with [html5ever](hex.pm/packages/html5ever) parser to parse the HTML page of [Baidu Baike - 中华姓氏大全](https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E5%A7%93%E6%B0%8F%E5%A4%A7%E5%85%A8/1689641), the Rust compiler [installed](https://www.rust-lang.org/tools/install) is required.
 
 After the mix dependences installed, run `mix generate_parser` you will see the following output:
 
@@ -49,3 +49,7 @@ Successfully download dataset from: `https://baike.baidu.com/item/中华姓氏�
 As usual, we need to follow the above steps to update dataset(if needed) or fix dataset processing not working because the original web page content changed.
 
 Currently, the `priv/data/Chinese_Family_Name.xlsx` file is a copy from [wainshine/Chinese-Names-Corpus](https://github.com/wainshine/Chinese-Names-Corpus) in this repo.
+
+## Test
+
+Run `mix test`
