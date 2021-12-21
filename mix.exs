@@ -55,7 +55,7 @@ defmodule ChineseName.MixProject do
 
   defp package do
     [
-      files: ["lib/chinese_name.ex", "lib/generated" "mix.exs", "README.md", "LICENSE.md"],
+      files: ["lib/chinese_name.ex", "lib/generated", "mix.exs", "README.md", "LICENSE.md"],
       licenses: ["MIT"],
       links: %{
         "GitHub" => @source_url
