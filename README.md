@@ -9,7 +9,7 @@ The surnames dataset are merged from:
 
 ## Usage
 
-We use pattern match to find the match surname or others in the pre-compiled modules, here are some examples:
+We use pattern match to find the matched surname or others in the pre-compiled modules, here are some examples:
 
 ```
 iex(1)> ChineseName.surname("李四")
@@ -20,7 +20,7 @@ iex(3)> ChineseName.split("李四")
 {"李", "四"}
 ```
 
-If input an invalid or not-included in the dataset surnames, there will return `nil` or the origin input:
+If input an invalid or not-included in the dataset surnames, there will return `nil` or the original input:
 
 ```
 iex(5)> ChineseName.surname("测试")
@@ -46,7 +46,7 @@ Successfully download dataset from: `https://baike.baidu.com/item/中华姓氏�
 * creating lib/generated/break.ex
 ```
 
-As usual, we need to follow the above steps to update dataset(if needed) or fix dataset processing not working because the original web page content changed.
+As usual, we need to follow the above steps to initialize, update dataset(if needed) or the original web page content change caused a fixing to the dataset processing.
 
 Currently, the `priv/data/Chinese_Family_Name.xlsx` file is a copy from [wainshine/Chinese-Names-Corpus](https://github.com/wainshine/Chinese-Names-Corpus) in this repo.
 
