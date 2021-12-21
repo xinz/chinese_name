@@ -2,7 +2,7 @@
 
 A simple tool built-in dataset for processing Chinese name, to get the surname, given name, or both from the valid Chinese name input.
 
-The surnams dataset are merged from:
+The surnames dataset are merged from:
 
  * [Baidu Baike - 中华姓氏大全](https://baike.baidu.com/item/%E4%B8%AD%E5%8D%8E%E5%A7%93%E6%B0%8F%E5%A4%A7%E5%85%A8/1689641)
  * [wainshine/Chinese-Names-Corpus](https://github.com/wainshine/Chinese-Names-Corpus/tree/master/Chinese_Names_Corpus/Chinese_Family_Name（1k）.xlsx )
