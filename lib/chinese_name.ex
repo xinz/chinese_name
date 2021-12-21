@@ -16,7 +16,7 @@ defmodule ChineseName do
       nil
 
   """
-  @spec surname(String.t) :: String.t | nil
+  @spec surname(String.t()) :: String.t() | nil
   defdelegate surname(name), to: __MODULE__.Generated.Surname
 
   @doc ~S"""
@@ -32,7 +32,7 @@ defmodule ChineseName do
       nil
 
   """
-  @spec given_name(String.t) :: String.t | nil
+  @spec given_name(String.t()) :: String.t() | nil
   defdelegate given_name(name), to: __MODULE__.Generated.GivenName
 
   @doc ~S"""
@@ -49,6 +49,6 @@ defmodule ChineseName do
       "测试"
 
   """
-  @spec split(String.t) :: String.t | {String.t, String.t}
+  @spec split(String.t()) :: String.t() | {String.t(), String.t()}
   defdelegate split(name), to: __MODULE__.Generated.Break
 end

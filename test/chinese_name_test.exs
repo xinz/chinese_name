@@ -16,14 +16,14 @@ defmodule ChineseNameTest do
     assert ChineseName.surname("小小鱼") == nil
     assert ChineseName.surname("忘记") == nil
   end
-  
+
   test "ChineseName.given_name/1 with valid name" do
     assert ChineseName.given_name("李白") == "白"
     assert ChineseName.given_name("张sam") == "sam"
     assert ChineseName.given_name("公孙胜") == "胜"
     assert ChineseName.given_name("司马迁") == "迁"
     assert ChineseName.given_name("大怀真") == "怀真"
-    assert ChineseName.given_name("牛旺旺旺") == "旺旺旺" 
+    assert ChineseName.given_name("牛旺旺旺") == "旺旺旺"
   end
 
   test "ChineseName.given_name/1 with invalid name" do

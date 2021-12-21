@@ -4,7 +4,7 @@ defmodule Mix.ChineseName.Parser.HTML do
   @selector "table[log-set-param=table_view] tr:not(:first-child) div[class=para]"
 
   def parse(html) do
-    html 
+    html
     |> Floki.parse_document!()
     |> Floki.find(@selector)
     |> Enum.map(fn div ->
@@ -15,5 +15,4 @@ defmodule Mix.ChineseName.Parser.HTML do
   defp text(html) do
     html |> Floki.text() |> String.trim()
   end
-
 end

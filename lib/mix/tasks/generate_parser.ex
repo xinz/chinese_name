@@ -23,18 +23,21 @@ defmodule Mix.Tasks.GenerateParser do
     case Finch.build(:get, URI.encode(@html_datasource)) |> Finch.request(Download) do
       {:ok, response} ->
         {:ok, response.body}
+
       error ->
         error
     end
   end
 
   defp parse(html) do
-    Mix.shell().info("Successfully download dataset from: `#{@html_datasource}` will be merged with datasource from `#{@xlsx_datasource}`")
+    Mix.shell().info(
+      "Successfully download dataset from: `#{@html_datasource}` will be merged with datasource from `#{@xlsx_datasource}`"
+    )
+
     Mix.ChineseName.Parser.parse(html, @xlsx_datasource)
   end
 
   defp generate(surnames) do
-
     to_gen = [
       {"priv/templates/generate_parser/break.ex", "lib/generated/break.ex"},
       {"priv/templates/generate_parser/given_name.ex", "lib/generated/given_name.ex"},
@@ -46,6 +49,7 @@ defmodule Mix.Tasks.GenerateParser do
         source
         |> EEx.eval_file(context: %{surnames: surnames})
         |> Code.format_string!()
+
       Mix.Generator.create_file(target, file_content, [])
     end
 
@@ -53,5 +57,4 @@ defmodule Mix.Tasks.GenerateParser do
 
     Enum.map(stream, fn item -> item end)
   end
-
 end
